@@ -21,11 +21,11 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         //transform.LookAt(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        
+
 
         this.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
+
         Get_MouseInput();
         Update_Moving();
     }
@@ -50,9 +50,9 @@ public class PlayerMove : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * speed);
         Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, angle), Time.deltaTime * rotateSpeed);
 
-        Vector2 mouseWorldPoint = Camera.main.ScreenToWorldPoint( mouseCursor.position);
+        Vector2 mouseWorldPoint = Camera.main.ScreenToWorldPoint(mouseCursor.position);
 
-        if( (mouseWorldPoint - (Vector2)transform.position).magnitude < 0.2f )
+        if ((mouseWorldPoint - (Vector2)transform.position).magnitude < 0.2f)
         {
             mouseCursor.gameObject.SetActive(false);
         }
