@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 310408096052199115}
   m_Layer: 0
   m_Name: Apple
-  m_TagString: Untagged
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e117ee427c6e344c944d1ab31c2abd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Addhp: 12
+  Addexp: 1000
 --- !u!58 &310408096052199115
 CircleCollider2D:
   m_ObjectHideFlags: 0
